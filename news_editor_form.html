@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>News Editor Form</title>
+    <link href="custom.css" rel="stylesheet" type="text/css">
+
+    <script>
+        function showNews() {
+            var show_headline = document.getElementById("news_headline").value;
+            var show_category = document.getElementById("category").value;
+            var show_des = document.getElementById("description").value;
+            var show_editor = document.getElementById("editor").value;
+
+            document.getElementById("newPublish").style.display = "block";
+            document.getElementById("newsHeadline").innerHTML = show_headline;
+            document.getElementById("newsCategory").innerHTML = show_category;
+            document.getElementById("newsDescription").innerHTML = show_des;
+            document.getElementById("editorName").innerHTML = show_editor;
+        }
+    </script>
+
+
+</head>
+<body>
+     Headline: <input type="text" id="news_headline"/><br><br>
+     Category: <select id="category">
+         <option> National </option>
+         <option> International </option>
+         <option> Sports </option>
+     </select><br><br>
+     Description: <input type="text-area" id="description" /><br><br>
+     Editor: <select id="editor">
+         <option> Shaharia Azam </option>
+         <option> Mita Yesmin </option>
+     </select><br><br>
+     <input type="button" value="Publish" id="show_news" onclick="showNews()" /><br><br>
+
+     <div style="display: none" id="newPublish">
+         <div>Headline: <span id="newsHeadline"></span></div>
+         <div>Category: <span id="newsCategory"></span></div>
+         <div>Description: <span id="newsDescription"></span></div>
+         <div>Editor: <span id="editorName"></span></div>
+     </div>
+
+</body>
+</html>

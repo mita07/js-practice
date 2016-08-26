@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Form</title>
+
+    <link href="custom.css" type="text/css" rel="stylesheet">
+
+    <script>
+        function showResult () {
+            var yourName = document.getElementById("name").value;
+            var FathersName = document.getElementById("father_name").value;
+            var gender = document.getElementById("gender_name").value;
+            var country = document.getElementById("country_name").value;
+
+            document.getElementById("output").style.display = "block";
+            document.getElementById("name_result").innerHTML = yourName;
+            document.getElementById("father_name_result").innerHTML = FathersName;
+            document.getElementById("gender_result").innerHTML = gender;
+            document.getElementById("country_result").innerHTML = country;
+
+
+            console.log(a);
+        }
+
+
+    </script>
+</head>
+<body>
+      Name: <input type="text" id="name"/><br><br>
+      Father's Name:  <input type="text" id="father_name"/><br><br>
+      Select your gender: <select id="gender_name">
+          <option> Male </option>
+          <option> Female </option>
+          <option> Others </option>
+      </select><br><br>
+      Select your country: <select id="country_name">
+          <option> Bangladesh </option>
+          <option> India </option>
+          <option> USA </option>
+          <option> China </option>
+          <option> Pakistan </option>
+      </select><br><br>
+      <input type="button" value="Get Result" onclick="showResult()"/><br><br><br>
+
+<div id="output" style="display: none;">
+      <div>Your Name: <span id="name_result"></span> </div>
+      <div>Father's Name: <span id="father_name_result"></span> </div>
+      <div>Gender: <span id="gender_result"></span></div>
+      <div> Country: <span id="country_result"></span></div>
+</div>
+
+</body>
+</html>
