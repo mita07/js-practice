@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apply Now Form</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="custom.css" type="text/css">
+
+</head>
+<body>
+<div class="container box">
+    <form>
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" id="your_name" placeholder="Your Full Name" required>
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control" id="email_address" placeholder="Email Address" required>
+        </div>
+        <div class="form-group">
+            <label>Contact No.</label>
+            <input type="text" class="form-control" id="phone_number" placeholder="Phone or mobile number" required>
+        </div>
+        <div class="form-group">
+            <label>Additional Phone</label>
+            <input type="text" class="form-control" id="additional_phone_number" placeholder="">
+        </div>
+        <div class="form-group">
+            <label> Job Position</label>
+            <select class="form-control" id="job_position" required>
+                <option>Jr. Wordpress Developer</option>
+                <option>Jr. Software Engineer</option>
+                <option>Online Sales Agent</option>
+                <option>SEO Analyst</option>
+                <option>Mobile Apps Developer</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label> Educational Qualification</label>
+            <select class="form-control" id="educational_qualification" required>
+                <option>SSC</option>
+                <option>HSC</option>
+                <option>B.Sc</option>
+                <option>M.Sc</option>
+                <option>Diploma</option>
+                <option>Others</option>
+                <option>N/A</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Major Subject</label>
+            <input type="text" class="form-control" id="major_subject" placeholder="As Example: Computer Science or CSE" required>
+        </div>
+
+        <div class="form-group">
+            <label>CV Upload</label>
+            <input type="file" id="cv_upload" required>
+            <p class="help-block">Example block-level help text here.</p>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox"> Check me out
+            </label>
+        </div>
+        <button type="submit" class="btn btn-default" id="show_details_info">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
