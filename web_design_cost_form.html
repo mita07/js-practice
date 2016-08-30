@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Design Cost Form</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="custom.css" rel="stylesheet" type="text/css">
+
+    <script>
+        function finalCost(){
+            var cat = document.getElementById("site_category").value;
+            var page = document.getElementById("page_number").value;
+            var img = document.getElementById("img_number").value;
+            var slider = document.getElementById("slider_number").value;
+            var seo = document.getElementById("month_seo").value;
+
+            var total = (parseInt(cat)*10) + (parseInt(page)*2) + (parseInt(img)*1) + (parseInt(slider)*5) + (parseInt(seo)*8);
+
+            document.getElementById("result").innerHTML = total;
+        }
+    </script>
+</head>
+
+<body>
+     <div class="web_design_box">
+         <form>
+             <h3>Web Design Cost Form </h3><br>
+             <div class="form-group">
+                 <label>Category</label>
+                 <select class="form-control" id="site_category" onchange="finalCost()">
+                     <option value="0">Select website category ...</option>
+                     <option value="2"> Corporate </option>
+                     <option value="3"> eCommerce </option>
+                     <option value="4"> Education </option>
+                     <option value="5"> Entertainment </option>
+                     <option value="6"> Real Estate </option>
+                     <option value="7"> Technology </option>
+                 </select>
+             </div>
+             <div class="form-group">
+                 <label>Namber of pages</label>
+                 <input type="number" class="form-control" id="page_number" value="0" placeholder="How many pages you want?" onkeyup="finalCost()">
+             </div>
+             <div class="form-group">
+                 <label>Namber of images</label>
+                 <input type="number" class="form-control" id="img_number" value="0" placeholder="How many images you want?" onkeyup="finalCost()">
+             </div>
+             <div class="form-group">
+                 <label>Namber of sliders </label>
+                 <input type="number" class="form-control" id="slider_number" value="0" placeholder="How many sliders you want?" onkeyup="finalCost()">
+             </div>
+             <div class="form-group">
+                 <label>Monthly SEO</label>
+                 <select class="form-control" id="month_seo" onchange="finalCost()">
+                     <option value="0">Do you want SEO?</option>
+                     <option value="1"> Yes </option>
+                     <option value="2"> No </option>
+                     <option value="0"> Later</option>
+                 </select>
+             </div><br>
+             <div class="form-group">
+                 <label>Total Cost ($) : </label>
+                 <span id="result" style="background-color: #31418f;color: #fff;padding: 6px 70px;font-weight: 600;font-size: 18px; margin-left: 10px;border-radius: 5px;">0</span>
+             </div>
+         </form>
+     </div>
+</body>
+</html>
