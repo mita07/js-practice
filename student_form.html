@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title> Form Practice </title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="custom.css" rel="stylesheet" type="text/css">
+
+    <script>
+        function student_details() {
+            var stu_name = document.getElementById("student_name").value;
+            var stu_father_name = document.getElementById("student_father_name").value;
+            var stu_email = document.getElementById("student_email").value;
+            var stu_id = document.getElementById("student_id").value;
+            var stu_major_course = document.getElementById("major_course").value;
+
+            document.getElementById("student_info").style.display="block";
+            document.getElementById("stu_info").style.display="none";
+            document.getElementById("studentName").innerHTML = stu_name;
+            document.getElementById("studentFatherName").innerHTML = stu_father_name;
+            document.getElementById("studentEmail").innerHTML = stu_email;
+            document.getElementById("studentID").innerHTML = stu_id;
+            document.getElementById("majorCourse").innerHTML = stu_major_course;
+        }
+    </script>
+
+</head>
+
+
+<body>
+<div class="box3" id="stu_info">
+    <h2> Student's Information </h2><br>
+    <form>
+        <div class="form-group">
+            <label>Student Name </label>
+            <input type="text" class="form-control" id="student_name" required="required" onkeypress="document.getElementById('stu_father_field').style.display= 'block'" />
+        </div>
+        <div class="form-group" style="display: none;" id="stu_father_field">
+            <label>Student's Father Name </label>
+            <input type="text" class="form-control" id="student_father_name" required="required" onkeypress="document.getElementById('stu_email_field').style.display= 'block'"/>
+        </div>
+        <div class="form-group" style="display: none;" id="stu_email_field">
+            <label>Student Email</label>
+            <input type="email" class="form-control" id="student_email" required="required" onkeypress="document.getElementById('stu_id_field').style.display= 'block'"/>
+        </div>
+        <div class="form-group" style="display: none;" id="stu_id_field">
+            <label>Student ID </label>
+            <input type="number" class="form-control" id="student_id" required="required" onkeypress="document.getElementById('major_course_field').style.display= 'block'"/>
+        </div>
+        <div class="form-group" style="display: none;" id="major_course_field">
+            <label> Major Course </label>
+            <select class="form-control" id="major_course" required="required" onchange="document.getElementById('submit_button_field').style.display= 'block'">
+                <option value="">Select your subject ....</option>
+                <option>Mathematics</option>
+                <option>Bengali </option>
+                <option>English</option>
+                <option>Computer Science</option>
+                <option>Journalism</option>
+            </select>
+        </div><br>
+        <input type="button" class="btn btn-primary" onclick="student_details()" value="SUBMIT" style="display: none;" id="submit_button_field">
+
+    </form>
+</div>
+
+<div class="box11" id="student_info" style="display: none;">
+    <h3> Student's Information </h3>
+    <div> <strong> Student Name: </strong><span id="studentName"></span></div>
+    <div> <strong> Student's Father Name: </strong> <span id="studentFatherName"></span></div>
+    <div> <strong> Student Email: </strong> <span id="studentEmail"></span></div>
+    <div> <strong> Student ID: </strong> <span id="studentID"></span></div>
+    <div> <strong> Major Course: </strong> <span id="majorCourse"></span></div>
+</div>
+
+</body>
+</html>
