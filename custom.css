@@ -70,3 +70,12 @@
     background-color: #c6badc;
     box-shadow: 3px 5px 10px #7527b0;
 }
+.online_food_delivery_box {
+    margin-top: 30px;
+    margin-left: 150px;
+    margin-right: 550px;
+    margin-bottom: 60px;
+    padding: 20px 40px;
+    background-color: #d4c0b9;
+    box-shadow: 3px 5px 10px #714c4a;
+}
