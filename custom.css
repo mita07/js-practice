@@ -59,6 +59,7 @@
     margin-bottom: 60px;
     padding: 40px 50px;
     background-color: #d9edf7;
+    box-shadow: 3px 5px 10px #318f86;
 }
 .hotel_reserve_box {
     margin-top: 30px;
@@ -67,4 +68,5 @@
     margin-bottom: 60px;
     padding: 40px 50px;
     background-color: #c6badc;
+    box-shadow: 3px 5px 10px #7527b0;
 }
