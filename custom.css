@@ -71,11 +71,31 @@
     box-shadow: 3px 5px 10px #7527b0;
 }
 .online_food_delivery_box {
-    margin-top: 30px;
-    margin-left: 150px;
-    margin-right: 550px;
+    margin-top: 50px;
+    margin-left: 350px;
+    margin-right: 350px;
     margin-bottom: 60px;
     padding: 20px 40px;
     background-color: #d4c0b9;
     box-shadow: 3px 5px 10px #714c4a;
+}
+.result_box {
+    margin-top: 15%;
+    margin-left: 350px;
+    margin-right: 350px;
+    margin-bottom: 60px;
+    padding: 20px 40px;
+    background-color: #d4c0b9;
+    box-shadow: 3px 5px 10px #714c4a;
+}
+.result_box_text {
+    color: #232222;
+    font-size: 20px;
+    text-align: center;
+    padding-top:10px;
+}
+.result_box_text span {
+    color: #614136;
+    font-size: 26px;
+    text-align: center;
 }
