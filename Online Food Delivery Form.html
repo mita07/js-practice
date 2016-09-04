@@ -5,6 +5,7 @@
     <title> Online Food Delivery Form </title>
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" type="text/css">
     <link href="custom.css" rel="stylesheet" type="text/css">
 
     <script>
@@ -20,13 +21,14 @@
         }
         function ok_result(){
             document.getElementById("okResult").style.display="block";
+            document.getElementById("okResult").style.backgroundColor="#DCE775";
             document.getElementById("input_box").style.display="none";
         }
     </script>
 
 </head>
 <body>
-      <div class="online_food_delivery_box" id="input_box">
+      <div class="online_food_delivery_box animated bounceInDown" id="input_box">
           <h3> Online Food Delivery Form </h3><br>
           <form>
               <div class="form-group">
@@ -78,7 +80,7 @@
           </form>
       </div>
 
-      <div class="result_box" style="display: none;" id="okResult">
+      <div class="result_box animated zoomIn" style="display: none;" id="okResult">
           <h3 class="result_box_text" id="ok_text"> Your order is successfully submitted. Please keep patience, we will come to you soon.<br><br><span> --  Thank You  -- </span></h3><br>
       </div>
 
