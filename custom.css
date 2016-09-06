@@ -161,11 +161,14 @@
 .inputField {
     background-color: #7ca8bc;
     color: #fff;
-    padding: 10px 188px;
     font-weight: 600;
     font-size: 18px;
     border-radius: 2px;
     box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+    height: 40px;
+    width: 92%;
+    margin-left: 15px;
+    padding-top: 8px;
 }
 .inputFeild1 {
     padding-top: 25px;
