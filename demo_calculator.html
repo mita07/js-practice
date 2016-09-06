@@ -7,43 +7,73 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" type="text/css">
     <link href="custom.css" rel="stylesheet" type="text/css">
+
+    <script>
+        var calString = '';
+        var result = 0;
+
+        function showOutput(num){
+            calString += num;
+            result = result + num;
+            document.getElementById("inputDataField").innerHTML = calString;
+        }
+
+        var operator;
+        function showChar(char){
+            operator = char;
+            calString += char;
+            document.getElementById("inputDataField").innerHTML = calString;
+        }
+
+        function calculateResult(){
+            calString += ' = ';
+            calString += result;
+            document.getElementById("inputDataField").innerHTML = calString;
+        }
+
+        function refreshCal(){
+            calString = '';
+            result = 0;
+            document.getElementById("inputDataField").innerHTML = calString;
+        }
+    </script>
 </head>
 
 <body>
      <div class="container">
          <div class="demo_calculator_box">
              <div class="row">
-                 <div class="col-md-12 inputField">0</div>
+                 <div class="col-md-12 inputField" id="inputDataField"></div>
              </div>
              <div class="row inputFeild1">
-                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton">7</button></div>
-                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton">8</button></div>
-                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton">9</button></div>
-                 <div class="col-md-3"><button type="button" class="btn btn-default clearButton">On/C</button></div>
+                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton" onclick="showOutput(7)">7</button></div>
+                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton" onclick="showOutput(8)">8</button></div>
+                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton" onclick="showOutput(9)">9</button></div>
+                 <div class="col-md-3"><button type="button" class="btn btn-default clearButton" onclick="refreshCal()">On/C</button></div>
              </div>
              <div class="row inputFeild1">
-                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton">4</button></div>
-                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton">5</button></div>
-                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton">6</button></div>
-                 <div class="col-md-3"><button type="button" class="btn btn-default delButton">Del</button></div>
+                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton" onclick="showOutput(4)">4</button></div>
+                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton" onclick="showOutput(5)">5</button></div>
+                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton" onclick="showOutput(6)">6</button></div>
+                 <div class="col-md-3"><button type="button" class="btn btn-default delButton" onclick="refreshCal()">Del</button></div>
              </div>
              <div class="row inputFeild1">
-                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton">1</button></div>
-                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton">2</button></div>
-                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton">3</button></div>
-                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton">0</button></div>
+                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton" onclick="showOutput(1)">1</button></div>
+                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton" onclick="showOutput(2)">2</button></div>
+                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton" onclick="showOutput(3)">3</button></div>
+                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton" onclick="showOutput(0)">0</button></div>
              </div>
              <div class="row inputFeild1">
-                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton">+</button></div>
-                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton">-</button></div>
-                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton">x</button></div>
-                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton">÷</button></div>
+                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton" onclick="showChar(' + ')">+</button></div>
+                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton" onclick="showChar(' - ')">-</button></div>
+                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton" onclick="showChar(' x ')">x</button></div>
+                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton" onclick="showChar(' ÷ ')">÷</button></div>
              </div>
              <div class="row inputFeild1">
-                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton">%</button></div>
-                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton">√</button></div>
-                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton">.</button></div>
-                 <div class="col-md-3"><button type="button" class="btn btn-default equalButton">=</button></div>
+                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton" onclick="showChar(' % ')">%</button></div>
+                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton" onclick="showChar(' √ ')">√</button></div>
+                 <div class="col-md-3"><button type="button" class="btn btn-default inputButton" onclick="showChar(' . ')">.</button></div>
+                 <div class="col-md-3"><button type="button" class="btn btn-default equalButton" onclick="calculateResult()">=</button></div>
              </div>
          </div>
      </div>
