@@ -19,21 +19,24 @@
     line-height: 1.8;
 }
 .box {
-    background-color: #f7f7f7;
+    background-color: #cfefea;
     margin-top: 60px;
     margin-bottom: 50px;
     padding: 40px 60px;
 }
+
 #details_info {
-    background-color: #f7f7f7;
+    background-color: #cfefea;
     color: #463c39;
     font-size: 17px;
     padding: 30px 30px;
-    width: 40%;
-    border: 1px solid #cccccc;
+    width: 100%;
     font-family: sans-serif;
     line-height: 1.8;
     margin-left: 90px;
+    margin: 0 auto;
+    margin-top: 60px;
+    box-shadow: 3px 3px 6px #468a83;
 }
 .box3 {
     margin-top: 80px;
