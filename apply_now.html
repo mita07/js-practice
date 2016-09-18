@@ -3,16 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Apply Now Form</title>
+
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="custom.css" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="custom.css" rel="stylesheet" type="text/css">
+
+    <script>
+        function view_all_info(){
+            var name = document.getElementById("your_name").value;
+            var email = document.getElementById("email_address").value;
+            var contact = document.getElementById("phone_number").value;
+            var phone = document.getElementById("additional_phone_number").value;
+            var position = document.getElementById("job_position").value;
+            var qualification = document.getElementById("educational_qualification").value;
+            var subject = document.getElementById("major_subject").value;
+
+            document.getElementById("details_info").style.display = "block";
+
+            document.getElementById("yourName").innerHTML = name;
+            document.getElementById("emailAddress").innerHTML = email;
+            document.getElementById("contactNumber").innerHTML = contact;
+            document.getElementById("additionalPhone").innerHTML = phone;
+            document.getElementById("jobPosition").innerHTML = position;
+            document.getElementById("eduQua").innerHTML = qualification;
+            document.getElementById("majorSubject").innerHTML = subject;
+        }
+    </script>
 
 </head>
 <body>
-<div class="container box">
+<div class="container">
+    <div class="col-md-6 box" id="stu_details">
     <form>
         <div class="form-group">
             <label>Name</label>
-            <input type="text" class="form-control" id="your_name" placeholder="Your Full Name" required onkeypress="document.getElementById('email_address').style.border = '1px solid red'">
+            <input type="text" class="form-control" id="your_name" placeholder="Your Full Name" required>
         </div>
         <div class="form-group">
             <label>Email</label>
@@ -20,15 +45,16 @@
         </div>
         <div class="form-group">
             <label>Contact No.</label>
-            <input type="text" class="form-control" id="phone_number" placeholder="Phone or mobile number" required>
+            <input type="number" class="form-control" id="phone_number" placeholder="Phone or mobile number" required>
         </div>
         <div class="form-group">
             <label>Additional Phone</label>
-            <input type="text" class="form-control" id="additional_phone_number" placeholder="">
+            <input type="number" class="form-control" id="additional_phone_number" placeholder="Additional phone or mobile number">
         </div>
         <div class="form-group">
             <label> Job Position</label>
             <select class="form-control" id="job_position" required>
+                <option value=" " selected>Select Job Position...</option>
                 <option>Jr. Wordpress Developer</option>
                 <option>Jr. Software Engineer</option>
                 <option>Online Sales Agent</option>
@@ -39,6 +65,7 @@
         <div class="form-group">
             <label> Educational Qualification</label>
             <select class="form-control" id="educational_qualification" required>
+                <option value=" " selected>Select Qualification Category....</option>
                 <option>SSC</option>
                 <option>HSC</option>
                 <option>B.Sc</option>
@@ -54,8 +81,9 @@
         </div>
         <input type="button" class="btn btn-default" value="Submit" id="show_details_info" onclick="view_all_info()"/>
     </form>
-</div>
+    </div>
 
+<div class="col-md-6">
 <div id="details_info" style="display: none;">
     <div>Your Name: <span id="yourName"></span> </div>
     <div>Email Address: <span id="emailAddress"></span> </div>
@@ -65,6 +93,7 @@
     <div>Educational Qualification: <span id="eduQua"></span></div>
     <div>Major Subject: <span id="majorSubject"></span></div>
 </div>
-
+</div>
+</div>
 </body>
 </html>
