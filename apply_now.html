@@ -19,7 +19,6 @@
             var subject = document.getElementById("major_subject").value;
 
             document.getElementById("details_info").style.display = "block";
-
             document.getElementById("yourName").innerHTML = name;
             document.getElementById("emailAddress").innerHTML = email;
             document.getElementById("contactNumber").innerHTML = contact;
@@ -28,7 +27,7 @@
             document.getElementById("eduQua").innerHTML = qualification;
             document.getElementById("majorSubject").innerHTML = subject;
         }
-        function validateForm() {
+        /*function validateForm() {
             var x = document.forms["myForm"]["name"].value;
             if (x == null || x == "") {
                 alert("Name must be filled out");
@@ -39,14 +38,14 @@
                 alert("Email must be filled out");
                 return false;
             }
-        }
+        }*/
     </script>
 
 </head>
 <body>
 <div class="container">
     <div class="col-md-6 box" id="stu_details">
-    <form name="myForm" onsubmit="return validateForm()" method="post">
+    <form>
         <div class="form-group">
             <label>Name</label>
             <input type="text" class="form-control" id="your_name" placeholder="Your Full Name" required name="name">
@@ -65,8 +64,8 @@
         </div>
         <div class="form-group">
             <label> Job Position</label>
-            <select class="form-control" id="job_position" required>
-                <option value=" " selected>Select Job Position...</option>
+            <select class="form-control" id="job_position" required="">
+                <option selected disabled value=" ">Select Job Position...</option>
                 <option>Jr. Wordpress Developer</option>
                 <option>Jr. Software Engineer</option>
                 <option>Online Sales Agent</option>
@@ -76,8 +75,8 @@
         </div>
         <div class="form-group">
             <label> Educational Qualification</label>
-            <select class="form-control" id="educational_qualification" required>
-                <option value=" " selected>Select Qualification Category....</option>
+            <select class="form-control" id="educational_qualification" required="">
+                <option selected disabled value=" ">Select Qualification Category....</option>
                 <option>SSC</option>
                 <option>HSC</option>
                 <option>B.Sc</option>
@@ -96,6 +95,7 @@
     </div>
 
 <div class="col-md-6">
+
 <div id="details_info" style="display: none;">
     <div>Your Name: <span id="yourName"></span> </div>
     <div>Email Address: <span id="emailAddress"></span> </div>
