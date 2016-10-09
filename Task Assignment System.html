@@ -23,6 +23,8 @@
             var TaskType = document.getElementById("taskType").value;
             var taskPriority = document.getElementById("priority").value;
             var myDes = document.getElementsByName("des")[0].value;
+            var url = window.location.pathname;
+            var filename = url.substring(url.lastIndexOf('/')+1);
 
             if(CID){
                 if(Assign){
@@ -54,6 +56,7 @@
             document.getElementById("task_type").innerHTML = TaskType;
             document.getElementById("task_priority").innerHTML = taskPriority;
             document.getElementById("task_des").innerHTML = myDes;
+            document.getElementById("file").innerHTML = filename;
         }
         }
         function backHome(){
@@ -65,6 +68,7 @@
 <body>
      <div class="container-fluid">
          <h2 style="text-align: center; padding-top: 20px;"> Task Assignment System </h2>
+
          <div class="container taskAssignBox" id="taskAssignInfo">
              <div class="col-md-8">
                  <div class="form-group">
@@ -77,7 +81,7 @@
                  <div class="form-group">
                      <br>
                      <div class="input text">
-                         <input type="file" class="form-control" id="fileAdd">
+                         <input type="file" class="form-control" id="attachFile">
                      </div>
                  </div><br>
                  <input type="button" class="btn btn-success" value="SUBMIT" onclick="view_all_info()">
@@ -121,6 +125,7 @@
                  <div><strong>Task Type:</strong> <span id="task_type" style="color: #ff9800;"></span></div>
                  <div><strong>Priority: </strong><span id="task_priority" style="color: #ff9800;"></span></div>
                  <div><strong style="display: inline-block;">Description:</strong> <span id="task_des" style="color: #ff9800;display: inline-block;"></span> </div>
+                 <div><strong>Attach File: </strong><a href="url.lastIndexOf('/')+1" target="_blank">View Attachment</a></div><br>
                  <input type="button" class="btn btn-primary" value="BACK" onclick="backHome()">
              </div>
 
