@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title> Task Assignment System </title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+
+    <!-- include summernote css/js-->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.js"></script>
+
+    <link href="custom.css" rel="stylesheet" type="text/css">
+    <script>
+        $(document).ready(function() {
+            $('#description').summernote();
+        });
+    </script>
+</head>
+<body>
+     <div class="container-fluid">
+         <h2 style="text-align: center; padding-top: 20px;"> Task Assignment System </h2>
+         <div class="container taskAssignBox">
+             <div class="col-md-8">
+                 <div class="form-group">
+                     <label>Client ID</label>
+                     <input type="number" class="form-control" id="clientID" placeholder="Input Client ID">
+                 </div><br>
+                 <div class="form-group">
+                     <label>Description</label>
+                     <div id="description" style="height: 200px"></div>
+                 </div>
+                 <div class="form-group">
+                     <br>
+                     <div class="input text">
+                         <input type="file" class="form-control" id="fileAdd">
+                     </div>
+                 </div><br>
+                 <button type="button" class="btn btn-success">SUBMIT</button>
+             </div>
+             <div class="col-md-4">
+                 <div class="form-group">
+                     <label> Assign To </label>
+                     <select class="form-control" id="assignTo">
+                         <option selected disabled value="">Choose Member</option>
+                         <option> Mita </option>
+                         <option> Sadman </option>
+                         <option> Rakib </option>
+                         <option> Ranan </option>
+                         <option> Maruf </option>
+                     </select>
+                 </div><br>
+                 <div class="form-group">
+                     <label>Task Type </label>
+                     <select class="form-control" id="taskType">
+                         <option selected disabled value=""> Choose Type </option>
+                         <option> Edit </option>
+                         <option> Redesign </option>
+                         <option> New </option>
+                         <option> Live </option>
+                     </select>
+                 </div><br>
+                 <div class="form-group">
+                     <label> Priority </label>
+                     <select class="form-control" id="priority">
+                         <option selected disabled value=""> Choose Level </option>
+                         <option> High </option>
+                         <option> Regular </option>
+                     </select>
+                 </div>
+             </div>
+         </div>
+
+     </div>
+
+</body>
+</html>
