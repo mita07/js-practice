@@ -56,6 +56,10 @@
             document.getElementById("task_des").innerHTML = myDes;
         }
         }
+        function backHome(){
+            document.getElementById("taskAssignInfo").style.display = "block";
+            location.reload();
+        }
     </script>
 </head>
 <body>
@@ -117,6 +121,7 @@
                  <div><strong>Task Type:</strong> <span id="task_type" style="color: #ff9800;"></span></div>
                  <div><strong>Priority: </strong><span id="task_priority" style="color: #ff9800;"></span></div>
                  <div><strong style="display: inline-block;">Description:</strong> <span id="task_des" style="color: #ff9800;display: inline-block;"></span> </div>
+                 <input type="button" class="btn btn-primary" value="BACK" onclick="backHome()">
              </div>
 
      </div>
