@@ -227,3 +227,17 @@
     background-color: #fff;
     height: 200px !important;
 }
+#taskDetails_info {
+    background-color: #daf5f1;
+    color: #463c39;
+    font-size: 17px;
+    padding: 30px 30px;
+    width: 50%;
+    font-family: sans-serif;
+    line-height: 1.8;
+    margin-left: 90px;
+    margin: 0 auto;
+    margin-top: 60px;
+    box-shadow: 3px 3px 6px #468a83;
+    margin-bottom: 60px;
+}
