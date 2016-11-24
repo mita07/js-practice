@@ -26,12 +26,13 @@
             document.getElementById("roomDetails_info").style.display = "block";
             document.getElementById("room-booking-info").style.display = "none";
             document.getElementById("guest_name").innerHTML = Name;
-            document.getElementById("guest_phn").innerHTML = Address;
-            document.getElementById("guest_email").innerHTML = Phone;
-            document.getElementById("guest_NID").innerHTML = Email;
-            document.getElementById("guest_passport").innerHTML = NID;
-            document.getElementById("room_type").innerHTML = Passport;
-            document.getElementById("room_quantity").innerHTML = RoomType;
+            document.getElementById("guest_add").innerHTML = Address;
+            document.getElementById("guest_phn").innerHTML = Phone;
+            document.getElementById("guest_email").innerHTML = Email;
+            document.getElementById("guest_NID").innerHTML = NID;
+            document.getElementById("guest_passport").innerHTML = Passport;
+            document.getElementById("room_type").innerHTML = RoomType;
+            document.getElementById("room_quantity").innerHTML = RoomQuantity;
             document.getElementById("guest_quantity").innerHTML = RoomQuantity;
         }
         function backHome(){
@@ -111,18 +112,18 @@
 
          <div id="roomDetails_info" style="display: none;" class="animated zoomIn">
              <h4><b style="color: #607d8b;">Guest Information</b></h4>
-             <div><strong>Name: </strong> <span id="guest_name" style="color: #ff9800;"></span> </div>
-             <div><strong>Address: </strong> <span id="guest_add" style="color: #ff9800;"></span> </div>
-             <div><strong>Phone: </strong> <span id="guest_phn" style="color: #ff9800;"></span></div>
-             <div><strong>Email: </strong><span id="guest_email" style="color: #ff9800;"></span></div>
-             <div><strong>National ID: </strong><span id="guest_NID" style="color: #ff9800;"></span></div>
-             <div><strong>Passport No: </strong><span id="guest_passport" style="color: #ff9800;"></span></div><br>
+             <div><strong>Name: </strong> <span id="guest_name" style="color: #463c39;"></span> </div>
+             <div><strong>Address: </strong> <span id="guest_add" style="color: #463c39;"></span> </div>
+             <div><strong>Phone: </strong> <span id="guest_phn" style="color: #463c39;"></span></div>
+             <div><strong>Email: </strong><span id="guest_email" style="color: #463c39;"></span></div>
+             <div><strong>National ID: </strong><span id="guest_NID" style="color: #463c39;"></span></div>
+             <div><strong>Passport No: </strong><span id="guest_passport" style="color: #463c39;"></span></div><br>
 
              <h4><b style="color: #607d8b;">Booking Information</b></h4>
-             <div><strong>Room Type: </strong><span id="room_type" style="color: #ff9800;"></span></div>
-             <div><strong>Room Quantity: </strong><span id="room_quantity" style="color: #ff9800;"></span></div>
-             <div><strong>Number of Guests: </strong><span id="guest_quantity" style="color: #ff9800;"></span></div>
-             <div><strong>Facilities: </strong><span id="guest_facilities" style="color: #ff9800;"></span></div><br>
+             <div><strong>Room Type: </strong><span id="room_type" style="color: #463c39;"></span></div>
+             <div><strong>Room Quantity: </strong><span id="room_quantity" style="color: #463c39;"></span></div>
+             <div><strong>Number of Guests: </strong><span id="guest_quantity" style="color: #463c39;"></span></div>
+             <div><strong>Facilities: </strong><span id="guest_facilities" style="color: #463c39;"></span></div><br>
              <input type="button" class="btn btn-primary" value="BACK TO HOME" onclick="backHome()">
          </div>
      </div>
