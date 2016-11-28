@@ -12,7 +12,7 @@
     <link href="custom.css" rel="stylesheet" type="text/css">
 
     <script>
-        function view_all_info(){
+        function view_all_info() {
             var Name = document.getElementById("guestName").value;
             var Address = document.getElementById("guestAdd").value;
             var Phone = document.getElementById("guestPhone").value;
@@ -22,19 +22,71 @@
             var RoomType = document.getElementById("roomType").value;
             var RoomQuantity = document.getElementById("roomQuantity").value;
             var GuestQuantity = document.getElementById("guestQuantity").value;
+            var GuestFacilities = document.getElementById("guestFacilities").value;
 
-            document.getElementById("roomDetails_info").style.display = "block";
-            document.getElementById("room-booking-info").style.display = "none";
-            document.getElementById("guest_name").innerHTML = Name;
-            document.getElementById("guest_add").innerHTML = Address;
-            document.getElementById("guest_phn").innerHTML = Phone;
-            document.getElementById("guest_email").innerHTML = Email;
-            document.getElementById("guest_NID").innerHTML = NID;
-            document.getElementById("guest_passport").innerHTML = Passport;
-            document.getElementById("room_type").innerHTML = RoomType;
-            document.getElementById("room_quantity").innerHTML = RoomQuantity;
-            document.getElementById("guest_quantity").innerHTML = RoomQuantity;
+            if(Name){
+                if(Address){
+                    if(Phone){
+                        if(Email){
+                            if(NID){
+                                if(Passport) {
+                                    if (RoomType) {
+                                        if (RoomQuantity) {
+                                            if (GuestQuantity) {
+                                            }
+                                            else {
+                                                alert('Please Enter Guest Quantity')
+                                            }
+                                        }
+                                        else {
+                                            alert('Please Enter Room Quantity')
+                                        }
+                                    }
+                                    else {
+                                        alert('Please Enter Room Type')
+                                    }
+                                }
+                                else{
+                                    alert('Please Enter Passport Number')
+                                }
+                            }
+                            else{
+                                alert('Please Enter NID Number')
+                            }
+                        }
+                        else{
+                            alert('Please Enter Email')
+                        }
+                    }
+                    else{
+                        alert('Please Enter Phone Number')
+                    }
+                }
+                else{
+                    alert('Please Enter Address')
+                }
+            }
+            else {
+                alert('Please Enter Name');
+            }
+
+            if (Name && Address && Phone && Email && NID && Passport && RoomType && RoomQuantity && GuestQuantity) {
+
+                document.getElementById("roomDetails_info").style.display = "block";
+                document.getElementById("room-booking-info").style.display = "none";
+                document.getElementById("guest_name").innerHTML = Name;
+                document.getElementById("guest_add").innerHTML = Address;
+                document.getElementById("guest_phn").innerHTML = Phone;
+                document.getElementById("guest_email").innerHTML = Email;
+                document.getElementById("guest_NID").innerHTML = NID;
+                document.getElementById("guest_passport").innerHTML = Passport;
+                document.getElementById("room_type").innerHTML = RoomType;
+                document.getElementById("room_quantity").innerHTML = RoomQuantity;
+                document.getElementById("guest_quantity").innerHTML = GuestQuantity;
+                document.getElementById("guest_facilities").innerHTML = GuestFacilities;
+            }
         }
+
         function backHome(){
             document.getElementById("room-booking-info").style.display = "block";
             location.reload();
@@ -91,13 +143,13 @@
                  </div>
                  <div class="form-group">
                      <label>Number of Rooms</label>
-                     <input type="number" class="form-control" ID="roomQuantity" placeholder="Type Room Quantity" required="required">
+                     <input type="number" class="form-control" ID="roomQuantity" placeholder="Type Room's Quantity" required="required">
                  </div>
                  <div class="form-group">
                      <label>Number of Persons</label>
-                     <input type="number" class="form-control" ID="guestQuantity" placeholder="Type Room Quantity" required="required">
+                     <input type="number" class="form-control" ID="guestQuantity" placeholder="Type Person's Quantity" required="required">
                  </div><br>
-                 <div class="checkbox">
+                 <div class="checkbox" id="guestFacilities">
                      <b>Select Facilities</b><br> <br>
                      <label>
                          <input type="checkbox" value=""> Restaurant <br>
