@@ -22,7 +22,8 @@
             var RoomType = document.getElementById("roomType").value;
             var RoomQuantity = document.getElementById("roomQuantity").value;
             var GuestQuantity = document.getElementById("guestQuantity").value;
-            var GuestFacilities = document.getElementById("guestFacilities").value;
+            var GuestFacilities = document.getElementsByClassName('guestFacilities')[1].value;
+
 
             if(Name){
                 if(Address){
@@ -85,12 +86,14 @@
                 document.getElementById("guest_quantity").innerHTML = GuestQuantity;
                 document.getElementById("guest_facilities").innerHTML = GuestFacilities;
             }
+
         }
 
         function backHome(){
             document.getElementById("room-booking-info").style.display = "block";
             location.reload();
         }
+
     </script>
 </head>
 
@@ -132,13 +135,13 @@
                      <label>Room/Suite Type</label>
                      <select class="form-control" ID="roomType" required="required">
                          <option value="0" selected>Select Room/Suite </option>
-                         <option value="1"> Standard </option>
-                         <option value="2"> Deluxe </option>
-                         <option value="3"> Superior Deluxe </option>
-                         <option value="4"> Premier Deluxe  </option>
-                         <option value="5"> Executive Suite </option>
-                         <option value="6"> Junior Suite </option>
-                         <option value="7"> Honeymoon Suite </option>
+                         <option value="Standard"> Standard </option>
+                         <option value="Deluxe"> Deluxe </option>
+                         <option value="Superior Deluxe"> Superior Deluxe </option>
+                         <option value="Premier Deluxe"> Premier Deluxe  </option>
+                         <option value="Executive Suite"> Executive Suite </option>
+                         <option value="Junior Suite"> Junior Suite </option>
+                         <option value="Honeymoon Suite"> Honeymoon Suite </option>
                      </select>
                  </div>
                  <div class="form-group">
@@ -152,13 +155,14 @@
                  <div class="checkbox" id="guestFacilities">
                      <b>Select Facilities</b><br> <br>
                      <label>
-                         <input type="checkbox" value=""> Restaurant <br>
-                         <input type="checkbox" value=""> Swimming Pool <br>
-                         <input type="checkbox" value=""> Conference Room <br>
-                         <input type="checkbox" value=""> Transport
+                         <input class="guestFacilities" type="checkbox"  value="Restaurant"> Restaurant <br>
+                         <input class="guestFacilities" type="checkbox"  value="Swimming-Pool"> Swimming-Pool <br>
+                         <input class="guestFacilities" type="checkbox"  value="Conference-Room"> Conference-Room <br>
+                         <input class="guestFacilities" type="checkbox"  value="Transport"> Transport <br>
                      </label>
+
                  </div> <br>
-                 <input type="button" class="btn btn-success" value="SUBMIT" onclick="view_all_info()">
+                 <input type="button" class="btn btn-success" value="SUBMIT" onclick="return view_all_info()">
              </div>
          </div>
 
@@ -176,7 +180,7 @@
              <div><strong>Room Quantity: </strong><span id="room_quantity" style="color: #463c39;"></span></div>
              <div><strong>Number of Guests: </strong><span id="guest_quantity" style="color: #463c39;"></span></div>
              <div><strong>Facilities: </strong><span id="guest_facilities" style="color: #463c39;"></span></div><br>
-             <input type="button" class="btn btn-primary" value="BACK TO HOME" onclick="backHome()">
+             <input type="submit" class="btn btn-primary" value="BACK TO HOME" onclick="return backHome()">
          </div>
      </div>
 </body>
