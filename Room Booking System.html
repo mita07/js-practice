@@ -24,12 +24,10 @@
             var GuestQuantity = document.getElementById("guestQuantity").value;
             var CheckIn = document.getElementById("checkInDate").value;
             var CheckOut = document.getElementById("checkOutDate").value;
-            var GuestFacilities = document.getElementsByClassName('guestFacilities')[2].value;
+            /*var GuestFacilities = document.getElementsByClassName('guestFacilities').value;*/
 
-            var i, facilities = ['Restaurant','Swimming-pool','Conference-room','Transport'];
-            for(i=0; i<facilities.length; i++){
+            var facility = ['Restaurant', ' Swimming-pool', ' Conference-room', ' Transport'];
 
-            }
 
 
             if(Name){
@@ -91,7 +89,7 @@
                 document.getElementById("room_type").innerHTML = RoomType;
                 document.getElementById("room_quantity").innerHTML = RoomQuantity;
                 document.getElementById("guest_quantity").innerHTML = GuestQuantity;
-                document.getElementById("guest_facilities").innerHTML = GuestFacilities;
+                document.getElementById("guest_facilities").innerHTML = facility;
                 document.getElementById("check_in_date").innerHTML = CheckIn;
                 document.getElementById("check_out_date").innerHTML = CheckOut;
             }
@@ -199,13 +197,13 @@
                  <h4><b style="color: #607d8b;">Booking Information</b></h4>
              </div>
 
-                 <div class="col-md-6" style="padding-bottom: 20px;">
+                 <div class="col-md-7" style="padding-bottom: 20px;">
                      <div><strong>Room-Type: </strong><span id="room_type" style="color: #463c39;"></span></div>
                      <div><strong>Room-Quantity: </strong><span id="room_quantity" style="color: #463c39;"></span></div>
                      <div><strong>Number-of-Guests: </strong><span id="guest_quantity" style="color: #463c39;"></span></div>
                      <div><strong>Facilities: </strong><span id="guest_facilities" style="color: #463c39;"></span></div>
                  </div>
-                 <div class="col-md-6">
+                 <div class="col-md-5">
                      <div><strong>Check-In-Date: </strong><span id="check_in_date" style="color: #463c39;"></span></div>
                      <div><strong>Check-Out-Date: </strong><span id="check_out_date" style="color: #463c39;"></span></div>
                      <input type="submit" style="margin-top:20px;" class="btn btn-success" value="BACK TO HOME" onclick="return backHome()">
