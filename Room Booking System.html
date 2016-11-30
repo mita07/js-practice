@@ -22,7 +22,12 @@
             var RoomType = document.getElementById("roomType").value;
             var RoomQuantity = document.getElementById("roomQuantity").value;
             var GuestQuantity = document.getElementById("guestQuantity").value;
-            var GuestFacilities = document.getElementsByClassName('guestFacilities')[1].value;
+            var GuestFacilities = document.getElementsByClassName('guestFacilities')[2].value;
+
+            var i, facilities = ['Restaurant','Swimming-pool','Conference-room','Transport'];
+            for(i=0; i<facilities.length; i++){
+
+            }
 
 
             if(Name){
@@ -99,7 +104,7 @@
 
 <body>
      <div class="container-fluid" style="background-color: rgba(3, 169, 244, 0.02);">
-         <h2 style="text-align: center; padding-top: 10px;"> Room Booking System </h2>
+         <h2 style="text-align: center;padding-top: 10px;color: #607d8b;font-size: 22px;text-transform: uppercase;"> Room Booking System </h2>
          <div class="container roomBookingBox" id="room-booking-info">
              <div class="col-md-7">
                  <h4><b style="color: #607d8b;">Guest Information</b></h4><br>
@@ -166,7 +171,7 @@
              </div>
          </div>
 
-         <div id="roomDetails_info" style="display: none;" class="animated zoomIn">
+         <div id="roomDetails_info" style="display: none;" class="animated slideInRight">
              <h4><b style="color: #607d8b;">Guest Information</b></h4>
              <div><strong>Name: </strong> <span id="guest_name" style="color: #463c39;"></span> </div>
              <div><strong>Address: </strong> <span id="guest_add" style="color: #463c39;"></span> </div>
