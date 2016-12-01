@@ -26,6 +26,7 @@
             var CheckOut = document.getElementById("checkOutDate").value;
 
 
+            // code start for showing checkbox data
             var checks = document.getElementsByClassName('checks_facilities');
             var facilities = '';
             for ( i = 0; i < checks.length; i++) {
@@ -33,6 +34,8 @@
                     facilities += checks[i].value + ", ";
                 }
             }
+            // code end for showing checkbox data
+
 
             if(Name){
                 if(Address){
@@ -98,10 +101,12 @@
             }
         }
 
+        // code start for page refreshing
         function backHome(){
             document.getElementById("room-booking-info").style.display = "block";
             location.reload();
         }
+        // code end for page refreshing
 
     </script>
 </head>
