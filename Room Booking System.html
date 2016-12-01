@@ -24,11 +24,15 @@
             var GuestQuantity = document.getElementById("guestQuantity").value;
             var CheckIn = document.getElementById("checkInDate").value;
             var CheckOut = document.getElementById("checkOutDate").value;
-            /*var GuestFacilities = document.getElementsByClassName('guestFacilities').value;*/
-
-            var facility = ['Restaurant', ' Swimming-pool', ' Conference-room', ' Transport'];
 
 
+            var checks = document.getElementsByClassName('checks_facilities');
+            var facilities = '';
+            for ( i = 0; i < checks.length; i++) {
+                if ( checks[i].checked == true ) {
+                    facilities += checks[i].value + ", ";
+                }
+            }
 
             if(Name){
                 if(Address){
@@ -77,7 +81,6 @@
             }
 
             if (Name && Address && Phone && Email && NID && Passport && RoomType && RoomQuantity && GuestQuantity) {
-
                 document.getElementById("roomDetails_info").style.display = "block";
                 document.getElementById("room-booking-info").style.display = "none";
                 document.getElementById("guest_name").innerHTML = Name;
@@ -89,11 +92,10 @@
                 document.getElementById("room_type").innerHTML = RoomType;
                 document.getElementById("room_quantity").innerHTML = RoomQuantity;
                 document.getElementById("guest_quantity").innerHTML = GuestQuantity;
-                document.getElementById("guest_facilities").innerHTML = facility;
                 document.getElementById("check_in_date").innerHTML = CheckIn;
                 document.getElementById("check_out_date").innerHTML = CheckOut;
+                document.getElementById('result').innerHTML = facilities;
             }
-
         }
 
         function backHome(){
@@ -154,10 +156,10 @@
                  <div class="checkbox" id="guestFacilities" style="padding-left: 15px;">
                      <b>Select Facilities</b><br>
                      <label style="padding-top: 10px;">
-                         <input class="guestFacilities" type="checkbox"  value="Restaurant"> Restaurant <br>
-                         <input class="guestFacilities" type="checkbox"  value="Swimming-Pool"> Swimming-Pool <br>
-                         <input class="guestFacilities" type="checkbox"  value="Conference-Room"> Conference-Room <br>
-                         <input class="guestFacilities" type="checkbox"  value="Transport"> Transport <br>
+                         <input class="checks_facilities" type="checkbox"  value="Restaurant"> Restaurant <br>
+                         <input class="checks_facilities" type="checkbox"  value="Swimming-Pool"> Swimming-Pool <br>
+                         <input class="checks_facilities" type="checkbox"  value="Conference-Room"> Conference-Room <br>
+                         <input class="checks_facilities" type="checkbox"  value="Transport"> Transport <br>
                      </label>
                  </div><br>
                  <div class="colo-md-12" style="padding-bottom: 5px;">
@@ -180,7 +182,7 @@
                          <input type="date" class="form-control" ID="checkOutDate" placeholder="" required="required">
                      </div>
                  </div>
-                 <input type="button" style="margin-left: 15px;" class="btn btn-success" value="SUBMIT" onclick="return view_all_info()">
+                 <input type="button" style="margin-left: 15px;" class="btn btn-success" value="SUBMIT" onclick="view_all_info();">
              </div>
          </div>
 
@@ -201,7 +203,7 @@
                      <div><strong>Room-Type: </strong><span id="room_type" style="color: #463c39;"></span></div>
                      <div><strong>Room-Quantity: </strong><span id="room_quantity" style="color: #463c39;"></span></div>
                      <div><strong>Number-of-Guests: </strong><span id="guest_quantity" style="color: #463c39;"></span></div>
-                     <div><strong>Facilities: </strong><span id="guest_facilities" style="color: #463c39;"></span></div>
+                     <div><strong>Facilities: </strong><span id="result" style="color: #463c39;"></span></div>
                  </div>
                  <div class="col-md-5">
                      <div><strong>Check-In-Date: </strong><span id="check_in_date" style="color: #463c39;"></span></div>
