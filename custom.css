@@ -265,3 +265,33 @@
     margin-top: 30px;
     margin-bottom: 60px;
 }
+
+.productDelBox {
+    background-color: rgba(139, 195, 74, 0.44);
+    padding: 40px 25px;
+    box-shadow: 5px 5px 8px rgba(139, 195, 74, 0.76);
+}
+
+.productDelHeading {
+    text-align: center;
+    font-size: 22px;
+    color: #628a34;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-bottom: 30px;
+    padding-top:40px;
+}
+
+.costBox {
+    background-color: rgba(98, 138, 52, 0.52);
+    padding: 10px 110px;
+    margin-left: 15px;
+    border-radius: 5px;
+}
+.productSubmit {
+    margin-top: 10px;
+    background-color: #94b56e;
+    border: 0px;
+    padding: 10px 30px;
+    float: right;
+}
