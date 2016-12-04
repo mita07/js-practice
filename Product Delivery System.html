@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title> Product Delivery System </title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+    <link href="custom.css" rel="stylesheet" type="text/css">
+
+    <script>
+        function shoppingCost(){
+            var category = document.getElementById("productCategory").value;
+            var proName = document.getElementById("productName").value;
+            var Quantity = document.getElementById("productQuantity").value;
+            var Type = document.getElementById("deliveryType").value;
+
+            var total = (parseInt(proName)*2) + ((Quantity)*5) + (parseInt(Type)*2)
+            document.getElementById("showCost").innerHTML = total;
+        }
+    </script>
+
+
+</head>
+<body>
+     <h2 class="productDelHeading"> Product Delivery System </h2>
+     <div class="container productDelBox animated pulse">
+         <div class="col-md-5">
+             <select class="form-control" id="productCategory" required="required">
+                 <option disabled selected> Select Product Category </option>
+                 <option value="1"> Male </option>
+                 <option value="2"> Female </option>
+                 <option value="3"> Child </option>
+                 <option value="4"> Accessories </option>
+             </select><br>
+             <select class="form-control" id="productName" required="required" onchange="shoppingCost()">
+                 <option disabled selected> Select Product Name </option>
+                 <option value="500"> Shirt </option>
+                 <option value="200"> Pant </option>
+                 <option value="300"> Punjabi </option>
+                 <option value="800"> Saree </option>
+                 <option value="500"> Salware-kamiz </option>
+                 <option value="300"> Barbie Dress </option>
+                 <option value="200"> Polo T'shirt </option>
+             </select><br>
+             <input type="number" class="form-control" id="productQuantity" placeholder="Product Quantity" required="required" onkeyup="shoppingCost()"><br>
+             <select class="form-control" id="deliveryType" required="required" onchange="shoppingCost()">
+                 <option disabled selected> Delivery Type </option>
+                 <option value="1"> Emergency </option>
+                 <option value="0"> Normal </option>
+             </select><br><br><br>
+             <div>
+                 <label> Total Cost: </label>
+                 <span class="costBox" id="showCost">0</span>
+             </div>
+         </div>
+         <div class="col-md-1"></div>
+         <div class="col-md-6">
+             <input class="form-control" type="text" placeholder="Your Name" required="required"><br>
+             <textarea class="form-control" placeholder="Your Address" required="required"></textarea><br>
+             <input class="form-control" type="number" placeholder="Your Phone" required="required"><br>
+             <input class="form-control" type="email" placeholder="Your Email"><br>
+             <input type="button" value="SUBMIT" class="btn btn-success productSubmit">
+         </div>
+     </div>
+</body>
+</html>
