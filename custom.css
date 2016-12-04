@@ -270,6 +270,7 @@
     background-color: rgba(139, 195, 74, 0.44);
     padding: 40px 25px;
     box-shadow: 5px 5px 8px rgba(139, 195, 74, 0.76);
+    display: none;
 }
 
 .productDelHeading {
@@ -294,4 +295,11 @@
     border: 0px;
     padding: 10px 30px;
     float: right;
+}
+.resultBox {
+    background-color: rgba(0, 150, 136, 0.22);
+    padding: 40px 25px;
+    box-shadow: 5px 5px 5px rgba(0, 150, 136, 0.4);
+    width: 60%;
+    line-height: 2;
 }
