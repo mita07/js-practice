@@ -17,7 +17,6 @@
             var proName = 0;
             var Type = 0;
 
-            var category = document.getElementById("productCategory").value;
             var proName = document.getElementById("productName").value;
             var Quantity = document.getElementById("productQuantity").value;
             var Type = document.getElementById("deliveryType").value;
@@ -30,13 +29,29 @@
             var total = (parseInt(proName)* (Quantity) + parseInt(Type));
             document.getElementById("showCost").innerHTML = total;
         }
+
+        function showAllData(){
+            var Name = document.getElementById("Customer_name").value;
+            var Address = document.getElementById("Customer_address").value;
+            var Phone = document.getElementById("Customer_phone").value;
+            var Email = document.getElementById("Customer_email").value;
+            //var category = document.getElementById("productCategory").value;
+
+            document.getElementById("cust_info").style.display = "block";
+            document.getElementById("product_info").style.display = "none";
+            document.getElementById("showName").innerHTML = Name;
+            document.getElementById("showAddress").innerHTML = Address;
+            document.getElementById("showPhone").innerHTML = Phone;
+            document.getElementById("showEmail").innerHTML = Email;
+
+        }
     </script>
 
 
 </head>
 <body>
      <h2 class="productDelHeading"> Product Delivery System </h2>
-     <div class="container productDelBox animated pulse">
+     <div class="container productDelBox animated pulse" id="product_info">
          <div class="col-md-5">
              <select class="form-control" id="productCategory" required="required">
                  <option value="0" disabled selected> Select Product Category </option>
@@ -68,23 +83,23 @@
          </div>
          <div class="col-md-1"></div>
          <div class="col-md-6">
-             <input class="form-control" type="text" placeholder="Your Name" required="required"><br>
-             <textarea class="form-control" placeholder="Your Address" required="required"></textarea><br>
-             <input class="form-control" type="number" placeholder="Your Phone" required="required"><br>
-             <input class="form-control" type="email" placeholder="Your Email"><br>
-             <input type="button" value="SUBMIT" class="btn btn-success productSubmit">
+             <input class="form-control" id="Customer_name" type="text" placeholder="Your Name" required="required"><br>
+             <textarea class="form-control" id="Customer_address" placeholder="Your Address" required="required"></textarea><br>
+             <input class="form-control" id="Customer_phone" type="number" placeholder="Your Phone" required="required"><br>
+             <input class="form-control" id="Customer_email" type="email" placeholder="Your Email"><br>
+             <input type="button" value="SUBMIT" class="btn btn-success productSubmit" onclick="showAllData()">
          </div>
      </div>
 
-     <div class="container resultBox animated zoomIn">
-         <p id="showName"><b> Customer Name: </b></p>
-         <p id="showAddress"><b> Customer Address: </b></p>
-         <p id="showPhone"><b> Customer Phone: </b></p>
-         <p id="showEmail"><b> Customer Email: </b></p>
-         <p id="showProCat"><b> Product Category: </b></p>
-         <p id="showProName"><b> Product Name: </b></p>
-         <p id="showProQuantity"><b> Product Quantity: </b></p>
-         <p id="showProType"><b> Product Type: </b></p>
+     <div class="container resultBox animated zoomIn" id="cust_info">
+         <b> Customer Name: </b><span id="showName"></span><br>
+         <b> Customer Address: </b><span id="showAddress"></span><br>
+         <b> Customer Phone: </b> <span id="showPhone"></span><br>
+         <b> Customer Email: </b> <span id="showEmail"></span><br>
+         <b> Product Category: </b> <span id="showProCat"></span><br>
+         <b> Product Name: </b> <span id="showProName"></span><br>
+         <b> Product Quantity: </b> <span id="showProQuantity"></span><br>
+         <b> Product Type: </b> <span id="showProType"></span><br>
      </div>
 </body>
 </html>
