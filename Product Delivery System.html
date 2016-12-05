@@ -36,7 +36,7 @@
             var Phone = document.getElementById("Customer_phone").value;
             var Email = document.getElementById("Customer_email").value;
             var category = document.getElementById("productCategory").value;
-            //var proName = document.getElementById("productName").value;
+            var proName = document.getElementById("productName").value;
             var Quantity = document.getElementById("productQuantity").value;
             var Type = document.getElementById("deliveryType").value;
 
@@ -83,16 +83,6 @@
                  <option value="Child"> Child </option>
                  <option value="Accessories"> Accessories </option>
              </select>
-             <!--<select class="form-control" id="productName" required="required" onchange="shoppingCost()">
-                 <option value="0" disabled selected> Select Product Name </option>
-                 <option value="500"> Shirt = 500Tk </option>
-                 <option value="200"> Pant = 200Tk </option>
-                 <option value="700"> Punjabi = 700Tk </option>
-                 <option value="800"> Saree = 800Tk </option>
-                 <option value="500"> Salware-kamiz = 500Tk </option>
-                 <option value="300"> Barbie Dress = 300Tk </option>
-                 <option value="200"> Polo T'shirt = 200Tk</option>
-             </select><br>-->
 
              <div class="checkbox proNameBox" id="productNameList" style="padding-left: 15px;">
                  <b>Select Products: </b><br>
@@ -105,6 +95,17 @@
                  </label>
              </div>
 
+             <select class="form-control" id="productName" required="required" onchange="shoppingCost()">
+                 <option value="0" disabled selected> Select Product Name & Price </option>
+                 <option value="500"> Shirt = 500Tk </option>
+                 <option value="200"> Pant = 200Tk </option>
+                 <option value="700"> Punjabi = 700Tk </option>
+                 <option value="800"> Saree = 800Tk </option>
+                 <option value="500"> Salware-kamiz = 500Tk </option>
+                 <option value="300"> Barbie Dress = 300Tk </option>
+                 <option value="200"> Polo T'shirt = 200Tk</option>
+             </select><br>
+
              <div class="proQuantity"><br>
              <b>Products Quantity </b><br><br>
              <input type="number" value="1" class="form-control" id="productQuantity" placeholder="Product Quantity" required="required" onkeyup="shoppingCost()">
@@ -115,10 +116,7 @@
                  <option value="0"> Normal (free)</option>
              </select>
              <br><br>
-             <div>
-                 <label> Total Cost: </label>
-                 <span class="costBox" id="showCost">0</span>
-             </div>
+
          </div>
          <div class="col-md-1"></div>
          <div class="col-md-6">
@@ -126,7 +124,17 @@
              <textarea class="form-control" id="Customer_address" placeholder="Your Address" required="required"></textarea><br>
              <input class="form-control" id="Customer_phone" type="number" placeholder="Your Phone" required="required"><br>
              <input class="form-control" id="Customer_email" type="email" placeholder="Your Email"><br>
-             <input type="button" value="SUBMIT" class="btn btn-success productSubmit" onclick="showAllData()">
+             <div>
+                 <div class="col-md-8" style="margin-top: 30px;">
+                     <label> Total Cost: </label>
+                     <span class="costBox" id="showCost">0</span>
+                 </div>
+                 <div class="col-md-1"></div>
+                 <div class="col-md-3">
+                     <input type="button" value="SUBMIT" class="btn btn-success productSubmit" onclick="showAllData()">
+                 </div>
+             </div>
+
          </div>
      </div>
 
