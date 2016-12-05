@@ -35,7 +35,18 @@
             var Address = document.getElementById("Customer_address").value;
             var Phone = document.getElementById("Customer_phone").value;
             var Email = document.getElementById("Customer_email").value;
-            //var category = document.getElementById("productCategory").value;
+            var category = document.getElementById("productCategory").value;
+            //var proName = document.getElementById("productName").value;
+            var Quantity = document.getElementById("productQuantity").value;
+            var Type = document.getElementById("deliveryType").value;
+
+            var checkProName = document.getElementsByClassName("product_name_list");
+            var pro_name = "";
+            for(i=0; i<checkProName.length; i++){
+                if(checkProName[i].checked == true){
+                    pro_name += checkProName[i].value + ", ";
+                }
+            }
 
             document.getElementById("cust_info").style.display = "block";
             document.getElementById("product_info").style.display = "none";
@@ -43,24 +54,36 @@
             document.getElementById("showAddress").innerHTML = Address;
             document.getElementById("showPhone").innerHTML = Phone;
             document.getElementById("showEmail").innerHTML = Email;
-
+            document.getElementById("showProCat").innerHTML = category;
+            //document.getElementById("showProName").innerHTML = proName;
+            document.getElementById("showProQuantity").innerHTML = Quantity;
+            document.getElementById("showProType").innerHTML = Type;
+            document.getElementById("showProName").innerHTML = pro_name;
         }
+
+        // code start for page refreshing
+        function backHome(){
+            document.getElementById("product_info").style.display = "block";
+            document.getElementById("cust_info").style.display = "none";
+            location.reload();
+        }
+        // code end for page refreshing
     </script>
 
 
 </head>
 <body>
      <h2 class="productDelHeading"> Product Delivery System </h2>
-     <div class="container productDelBox animated pulse" id="product_info">
+     <div class="container productDelBox" id="product_info">
          <div class="col-md-5">
              <select class="form-control" id="productCategory" required="required">
                  <option value="0" disabled selected> Select Product Category </option>
-                 <option value="1"> Male </option>
-                 <option value="2"> Female </option>
-                 <option value="3"> Child </option>
-                 <option value="4"> Accessories </option>
-             </select><br>
-             <select class="form-control" id="productName" required="required" onchange="shoppingCost()">
+                 <option value="Male"> Male </option>
+                 <option value="Female"> Female </option>
+                 <option value="Child"> Child </option>
+                 <option value="Accessories"> Accessories </option>
+             </select>
+             <!--<select class="form-control" id="productName" required="required" onchange="shoppingCost()">
                  <option value="0" disabled selected> Select Product Name </option>
                  <option value="500"> Shirt = 500Tk </option>
                  <option value="200"> Pant = 200Tk </option>
@@ -69,13 +92,29 @@
                  <option value="500"> Salware-kamiz = 500Tk </option>
                  <option value="300"> Barbie Dress = 300Tk </option>
                  <option value="200"> Polo T'shirt = 200Tk</option>
-             </select><br>
-             <input type="number" value="1" class="form-control" id="productQuantity" placeholder="Product Quantity" required="required" onkeyup="shoppingCost()"><br>
+             </select><br>-->
+
+             <div class="checkbox proNameBox" id="productNameList" style="padding-left: 15px;">
+                 <b>Select Products: </b><br>
+                 <label style="padding-top: 10px;">
+                     <input class="product_name_list" type="checkbox"  value="Shirt"> Shirt <br>
+                     <input class="product_name_list" type="checkbox"  value="Pant"> Pant <br>
+                     <input class="product_name_list" type="checkbox"  value="Saree"> Saree <br>
+                     <input class="product_name_list" type="checkbox"  value="Punjabi"> Punjabi <br>
+                     <input class="product_name_list" type="checkbox"  value="Barbie-dress"> Barbie-dress <br>
+                 </label>
+             </div>
+
+             <div class="proQuantity"><br>
+             <b>Products Quantity </b><br><br>
+             <input type="number" value="1" class="form-control" id="productQuantity" placeholder="Product Quantity" required="required" onkeyup="shoppingCost()">
+             </div><br>
              <select class="form-control" id="deliveryType" required="required" onchange="shoppingCost()">
                  <option value="0" disabled selected> Delivery Type </option>
                  <option value="50"> Emergency (50Tk)</option>
                  <option value="0"> Normal (free)</option>
-             </select><br><br><br>
+             </select>
+             <br><br>
              <div>
                  <label> Total Cost: </label>
                  <span class="costBox" id="showCost">0</span>
@@ -100,6 +139,7 @@
          <b> Product Name: </b> <span id="showProName"></span><br>
          <b> Product Quantity: </b> <span id="showProQuantity"></span><br>
          <b> Product Type: </b> <span id="showProType"></span><br>
+         <input type="submit" style="margin-top:20px;" class="btn btn-success" value="BACK TO HOME" onclick="return backHome()">
      </div>
 </body>
 </html>
