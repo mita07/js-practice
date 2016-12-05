@@ -279,7 +279,7 @@
     text-transform: uppercase;
     font-weight: 600;
     padding-bottom: 30px;
-    padding-top:40px;
+    padding-top:20px;
 }
 
 .costBox {
@@ -302,4 +302,18 @@
     width: 60%;
     line-height: 2;
     display: none;
+}
+
+.proNameBox {
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.proQuantity {
+    background-color: white;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 0px 15px 30px 15px;
 }
