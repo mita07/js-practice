@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title> Basic JS Practice </title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+    <link href="custom.css" rel="stylesheet" type="text/css">
+
+    <script>
+
+        // Code for Text Color Change
+        function redColor(){
+            document.getElementById("color_text").style.color = "red";
+        }
+        function greenColor(){
+            document.getElementById("color_text").style.color = "darkgreen";
+        }
+        function purpleColor(){
+            document.getElementById("color_text").style.color = "mediumvioletred";
+        }
+        function blueColor(){
+            document.getElementById("color_text").style.color = "darkblue";
+        }
+        function yellowColor(){
+            document.getElementById("color_text").style.color = "yellow";
+        }
+        function orangeColor(){
+            document.getElementById("color_text").style.color = "darkorange";
+        }
+        function pinkColor(){
+            document.getElementById("color_text").style.color = "deeppink";
+        }
+
+
+       // Code for Background Color Change
+        function redBgColor(){
+            document.getElementById("color_text").style.backgroundColor = "red";
+        }
+        function greenBgColor(){
+            document.getElementById("color_text").style.backgroundColor = "darkgreen";
+        }
+        function purpleBgColor(){
+            document.getElementById("color_text").style.backgroundColor = "mediumvioletred";
+        }
+        function blueBgColor(){
+            document.getElementById("color_text").style.backgroundColor = "darkblue";
+        }
+        function yellowBgColor(){
+            document.getElementById("color_text").style.backgroundColor = "yellow";
+        }
+        function orangeBgColor(){
+            document.getElementById("color_text").style.backgroundColor = "darkorange";
+        }
+        function pinkBgColor(){
+            document.getElementById("color_text").style.backgroundColor = "deeppink";
+        }
+
+
+        // Code for Font Size Change
+        function fontSizeA(){
+            document.getElementById("color_text").style.fontSize = "20px";
+        }
+        function fontSizeB(){
+            document.getElementById("color_text").style.fontSize = "25px";
+        }
+        function fontSizeC(){
+            document.getElementById("color_text").style.fontSize = "30px";
+        }
+        function fontSizeD(){
+            document.getElementById("color_text").style.fontSize = "35px";
+        }
+        function fontSizeE(){
+            document.getElementById("color_text").style.fontSize = "40px";
+        }
+        function fontSizeF(){
+            document.getElementById("color_text").style.fontSize = "45px";
+        }
+        function fontSizeG(){
+            document.getElementById("color_text").style.fontSize = "50px";
+        }
+
+
+        // code start for reset button
+        function reset(){
+            document.getElementById("reset_button");
+            location.reload();
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-md-6">
+            <h2 style="margin-top: 100px;padding: 40px 50px;margin-right: 180px;text-align:center; border: 1px solid rgba(158, 158, 158, 0.25);" id="color_text"> Hello World </h2><br><br>
+            <p style="font-size: 20px;"> Color: </p>
+            <button type="button" onclick="redColor()" style="background-color: red;color:red;">red</button>
+            <button type="button" onclick="greenColor()" style="background-color: darkgreen;color:darkgreen;">red</button>
+            <button type="button" onclick="purpleColor()" style="background-color: mediumvioletred;color:mediumvioletred;">red</button>
+            <button type="button" onclick="blueColor()" style="background-color: darkblue;color:darkblue;">red</button>
+            <button type="button" onclick="yellowColor()" style="background-color: yellow;color:yellow;">red</button>
+            <button type="button" onclick="orangeColor()" style="background-color: darkorange;color:darkorange;">red</button>
+            <button type="button" onclick="pinkColor()" style="background-color: deeppink;color:deeppink;">red</button><br><br><br>
+
+            <p style="font-size: 20px;"> Background Color: </p>
+            <button type="button" onclick="redBgColor()" style="background-color: red;color:red;">red</button>
+            <button type="button" onclick="greenBgColor()" style="background-color: darkgreen;color:darkgreen;">red</button>
+            <button type="button" onclick="purpleBgColor()" style="background-color: mediumvioletred;color:mediumvioletred;">red</button>
+            <button type="button" onclick="blueBgColor()" style="background-color: darkblue;color:darkblue;">red</button>
+            <button type="button" onclick="yellowBgColor()" style="background-color: yellow;color:yellow;">red</button>
+            <button type="button" onclick="orangeBgColor()" style="background-color: darkorange;color:darkorange;">red</button>
+            <button type="button" onclick="pinkBgColor()" style="background-color: deeppink;color:deeppink;">red</button><br><br><br>
+
+
+            <p style="font-size: 20px;"> Font Size: </p>
+            <button type="button" onclick="fontSizeA()">20px</button>
+            <button type="button" onclick="fontSizeB()">25px</button>
+            <button type="button" onclick="fontSizeC()">30px</button>
+            <button type="button" onclick="fontSizeD()">35px</button>
+            <button type="button" onclick="fontSizeE()">40px</button>
+            <button type="button" onclick="fontSizeF()">45px</button>
+            <button type="button" onclick="fontSizeG()">50px</button><br><br><br>
+            <button type="button" onclick="reset()" id="reset_button" style="background-color: #F44336;color:#fff;padding: 10px 40px;font-size: 20px;border: 0;">Reset</button>
+        </div>
+
+        <div class="col-md-6">
+            <h2 style="margin-top: 100px;"> Color Changing </h2>
+        </div>
+    </div>
+
+
+</body>
+</html>
