@@ -132,7 +132,17 @@
             <button type="button" onclick="myFunction()" style="background-color: darkorange;color:#fff;padding: 20px 40px;border:0;margin-top:100px;">Click Me</button><br><br>
             <p id="demo"></p>
 
-            <button type="button" id="autoChange" onclick="clickChange()" style="background-color: #673ab7;color:#fff;border:0;padding: 20px 40px;margin-top:100px;">Click Me</button><br><br>
+
+
+            <button type="button" id="autoChange" onclick="clickChange()" style="background-color: deeppink;color:#fff;border:0;padding: 20px 40px;margin-top:100px;">Click Me</button><br><br>
+            <p style="font-size: 20px;"> </p>
+            <button type="button" style="background-color: red;color:red;">red</button>
+            <button type="button" style="background-color: darkgreen;color:darkgreen;">red</button>
+            <button type="button" style="background-color: mediumvioletred;color:mediumvioletred;">red</button>
+            <button type="button" style="background-color: darkblue;color:darkblue;">red</button>
+            <button type="button" style="background-color: yellow;color:yellow;">red</button>
+            <button type="button" style="background-color: darkorange;color:darkorange;">red</button>
+            <button type="button" style="background-color: deeppink;color:deeppink;">red</button>
 
         </div>
     </div>
@@ -149,16 +159,14 @@
     </script>
 
     <script>
-        var colors = ["red", "orange", "green", "blue"];
+        var select_colors = ["red", "darkgreen", "mediumvioletred", "darkblue", "yellow", "darkorange", "deeppink"];
 
         function clickChange() {
-            var x = colors.shift();
-            colors.push(x);
-
-            document.getElementById("autoChange").style.backgroundColor = x;
+            var y = select_colors.shift();
+            select_colors.push(y);
+            document.getElementById("autoChange").style.backgroundColor = y;
         }
     </script>
-
 
 </body>
 </html>
