@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title> Basic JS Practice  </title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="custom.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+<div class="container">
+    <div id="testColor" style="margin-top:40px;"></div>
+    <div class="colorBoxDiv" id="colorDiv"></div>
+
+</div>
+
+<script>
+
+    var select_colors = ["red", "darkgreen", "mediumvioletred", "darkblue", "yellow", "darkorange", "deeppink"];
+
+    var myColor = document.getElementById("testColor");
+    for (var i = 0; i < select_colors.length; i++) {
+        var color = select_colors[i];
+        console.log(color);
+        myColor.innerHTML += '<button   onClick="paintColor(\'' + color + '\')"  class="testColBox" style="background-color:' + color + ';"></button>';
+    }
+    /**
+     * @param col
+     * Display the exact color
+     */
+    function paintColor(col){
+        document.getElementById("colorDiv").style.backgroundColor = col;
+    }
+
+
+</script>
+
+</body>
+</html>
