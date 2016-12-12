@@ -5,6 +5,31 @@
     <title> Previous and next button  </title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="custom.css" rel="stylesheet" type="text/css">
+    <script>
+        var allColor = ["red", "darkgreen", "mediumvioletred", "darkblue", "yellow", "darkorange", "deeppink"];
+
+        /**
+         *
+         * @param action
+         */
+        function clickChange(action) {
+            //console.log(action);
+            if(action == 'next'){
+                x = allColor.shift();
+                allColor.push(x);
+                document.getElementById("nextChange").style.backgroundColor = x;
+            }
+            if(action == 'prev'){
+                y = allColor.pop();
+               allColor.unshift(y);
+
+                color =  allColor.slice(-1)[0];
+                document.getElementById("nextChange").style.backgroundColor = color;
+
+            }
+        }
+
+    </script>
 
 
 </head>
@@ -13,7 +38,7 @@
 
 <div class="container preNextBg">
     <div class="col-md-3 preButton">
-        <button type="button" class="btn btn-primary"> Previous </button>
+        <button type="button" class="btn btn-primary" onclick="clickChange('prev')"> Previous </button>
     </div>
 
     <div class="col-md-6">
@@ -29,19 +54,22 @@
     </div>
 
     <div class="col-md-3 nextButton">
-        <button type="button" class="btn btn-primary" onclick="clickChange()"> Next </button>
+        <button type="button" class="btn btn-primary" onclick="clickChange('next')"> Next </button>
     </div>
 
 </div>
 
-<script>
-    var allColor = ["red", "darkgreen", "mediumvioletred", "darkblue", "yellow", "darkorange", "deeppink"];
-    function clickChange() {
-        var y = allColor.shift();
-        allColor.push(y);
-        document.getElementById("nextChange").style.backgroundColor = y;
+
+<!--<script>
+    var allColor1 = ["deeppink", "darkorange", "yellow", "darkblue", "mediumvioletred", "darkgreen", "red"];
+
+    function preClick() {
+        var x = allColor1.shift();
+        allColor1.push(x);
+        document.getElementById("nextChange").style.backgroundColor = x;
     }
-</script>
+</script>-->
+
 
 <!--<script>
     var select_colors = ["red", "darkgreen", "mediumvioletred", "darkblue", "yellow", "darkorange", "deeppink"];
