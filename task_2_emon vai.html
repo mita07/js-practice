@@ -22,7 +22,6 @@
             if(action == 'prev'){
                 y = allColor.pop();
                allColor.unshift(y);
-
                 color =  allColor.slice(-1)[0];
                 document.getElementById("nextChange").style.backgroundColor = color;
 
@@ -43,9 +42,6 @@
 
     <div class="col-md-6">
         <div class="midArea" id="nextChange"></div>
-        <!--<div id="testColor" style="margin-top:40px;"></div>-->
-        <!--<input type="button" class="preColorMainDiv" id="autoChange" onclick="clickChange()">-->
-
         <div style="margin-top:30px;">
             <script>
                 document.write("Red", ", ", "Darkgreen", ", ", "Mediumvioletred", ", ", "Darkblue", ", ", "Yellow", ", ", "Darkorange", ", ", "Deeppink");
@@ -58,36 +54,6 @@
     </div>
 
 </div>
-
-
-<!--<script>
-    var allColor1 = ["deeppink", "darkorange", "yellow", "darkblue", "mediumvioletred", "darkgreen", "red"];
-
-    function preClick() {
-        var x = allColor1.shift();
-        allColor1.push(x);
-        document.getElementById("nextChange").style.backgroundColor = x;
-    }
-</script>-->
-
-
-<!--<script>
-    var select_colors = ["red", "darkgreen", "mediumvioletred", "darkblue", "yellow", "darkorange", "deeppink"];
-    var myColor = document.getElementById("testColor");
-    for (var i = 0; i < select_colors.length; i++) {
-        var color = select_colors[i];
-        console.log(color);
-        myColor.innerHTML += '<button   onClick="paintColor(\'' + color + '\')"  class="testColBox" style="background-color:' + color + ';"></button>';
-    }
-    /**
-     * @param col
-     * Display the exact color
-     */
-    function paintColor(col){
-        document.getElementById("colorDiv").style.backgroundColor = col;
-    }
-
-</script>-->
 
 </body>
 </html>
