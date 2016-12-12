@@ -12,24 +12,38 @@
 <body>
 
 <div class="container preNextBg">
-    <div class="col-md-3 nextButton">
+    <div class="col-md-3 preButton">
         <button type="button" class="btn btn-primary"> Previous </button>
     </div>
-    <div class="col-md-6 midArea">
 
-        <div class="preColorBoxDiv" id="colorDiv"></div>
-        <div id="testColor" style="margin-top:40px;"></div>
+    <div class="col-md-6">
+        <div class="midArea" id="nextChange"></div>
+        <!--<div id="testColor" style="margin-top:40px;"></div>-->
+        <!--<input type="button" class="preColorMainDiv" id="autoChange" onclick="clickChange()">-->
+
+        <div style="margin-top:30px;">
+            <script>
+                document.write("Red", ", ", "Darkgreen", ", ", "Mediumvioletred", ", ", "Darkblue", ", ", "Yellow", ", ", "Darkorange", ", ", "Deeppink");
+            </script>
+        </div>
     </div>
 
-    <div class="col-md-3 preButton">
-        <button type="button" class="btn btn-primary"> Next </button>
+    <div class="col-md-3 nextButton">
+        <button type="button" class="btn btn-primary" onclick="clickChange()"> Next </button>
     </div>
 
 </div>
 
-
 <script>
+    var select_colors = ["red", "darkgreen", "mediumvioletred", "darkblue", "yellow", "darkorange", "deeppink"];
+    function clickChange() {
+        var y = select_colors.shift();
+        select_colors.push(y);
+        document.getElementById("nextChange").style.backgroundColor = y;
+    }
+</script>
 
+<!--<script>
     var select_colors = ["red", "darkgreen", "mediumvioletred", "darkblue", "yellow", "darkorange", "deeppink"];
     var myColor = document.getElementById("testColor");
     for (var i = 0; i < select_colors.length; i++) {
@@ -45,7 +59,7 @@
         document.getElementById("colorDiv").style.backgroundColor = col;
     }
 
-</script>
+</script>-->
 
 </body>
 </html>
