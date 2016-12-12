@@ -325,25 +325,28 @@
 .colorBoxDiv {
     margin-top: 40px;
     padding: 70px;
-    width: 80px;
-    border: 1px solid grey;
+    width: 90px;
 }
 .preNextBg {
     margin-top: 80px;
     text-align: center;
 }
-.preColorBoxDiv {
-    padding: 90px;
-    border: 1px solid grey;
-}
+
 .preButton {
     padding-top: 90px;
 }
 
 .midArea{
-    padding-top: 20px;
+    padding-top: 200px;
+    border: 1px solid grey;
 }
 
 .nextButton {
     padding-top: 90px;
 }
+.preColorMainDiv {
+    padding: 100px 250px;
+    background-color: deeppink;
+}
+
+
