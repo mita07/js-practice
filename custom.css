@@ -328,3 +328,22 @@
     width: 80px;
     border: 1px solid grey;
 }
+.preNextBg {
+    margin-top: 80px;
+    text-align: center;
+}
+.preColorBoxDiv {
+    padding: 90px;
+    border: 1px solid grey;
+}
+.preButton {
+    padding-top: 90px;
+}
+
+.midArea{
+    padding-top: 20px;
+}
+
+.nextButton {
+    padding-top: 90px;
+}
