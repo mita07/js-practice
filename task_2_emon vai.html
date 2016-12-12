@@ -35,10 +35,10 @@
 </div>
 
 <script>
-    var select_colors = ["red", "darkgreen", "mediumvioletred", "darkblue", "yellow", "darkorange", "deeppink"];
+    var allColor = ["red", "darkgreen", "mediumvioletred", "darkblue", "yellow", "darkorange", "deeppink"];
     function clickChange() {
-        var y = select_colors.shift();
-        select_colors.push(y);
+        var y = allColor.shift();
+        allColor.push(y);
         document.getElementById("nextChange").style.backgroundColor = y;
     }
 </script>
