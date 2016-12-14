@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Live Check Data Length</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="container col-md-4" style="margin: 50px;">
+    <input type="text" class="form-control" id="myname" onkeyup="checkLength()";>
+    <div>
+        <span id="viewResult"></span>
+    </div>
+</div>
+
+
+<script>
+     function checkLength(){
+         var shoeLength = document.getElementById('myname').value.length;
+         document.getElementById("viewResult").innerHTML = shoeLength;
+         if(shoeLength>20){
+             document.getElementById("myname").style.border = "2px solid red";
+         }
+     }
+</script>
+
+</body>
+</html>
