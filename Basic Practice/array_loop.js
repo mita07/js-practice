@@ -5,7 +5,7 @@
  */
 var name = ["Mita", 20, true, "Toma", "Mrinmoy", "Shaharia", "Preview Technologies Limited"];
 
-function checkDataType(variable){
+/*function checkDataType(variable){
     if(typeof variable == "string"){
         console.log(variable + " is string");
     }
@@ -18,7 +18,7 @@ function checkDataType(variable){
     else{
         console.log("Can't find data type");
     }
-}
+}*/
 
 /*for (i = 0; i < name.length; i++) {
     checkDataType(name[i]);
@@ -26,6 +26,12 @@ function checkDataType(variable){
 
 for (i = 0; i < name.length; i++) {
     if(name[i].length != undefined){
-        console.log(name[i].length);
+        //console.log(name[i].length);
     }
 }
+
+
+//push pull
+var newArray = name.concat("Arafat", "Rifat", "Ammu", "Abbu");
+var list = newArray.slice(0, 8);
+console.log(list);
