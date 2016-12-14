@@ -348,5 +348,12 @@
     padding: 100px 250px;
 
 }
+.moveBox {
+    text-align: center;
+    width: 20%;
+    background-color: rgba(104, 123, 255, 0.82);
+    padding: 90px;
+    position: absolute;
+}
 
 
