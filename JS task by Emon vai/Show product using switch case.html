@@ -3,8 +3,29 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title> Show Product list and price using switch case </title>
+
 </head>
+
 <body>
+
+<script>
+    //var product = ["Pen", "Book", "Watch", "Notebook", "Charger", "Bottle", "Headphone", "Mobile", "Shirt", "Laptop"];
+   var product = "Book";
+
+    switch(product){
+        case ("Pen"):
+                document.write("This is " + product + " and Price = 10Tk");
+                break;
+
+        case "Book":
+            document.write("No it's not pen, it's a book");
+            break;
+
+        default:
+            document.write("Not Found");
+    }
+
+</script>
 
 </body>
 </html>
