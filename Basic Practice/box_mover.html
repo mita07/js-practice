@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Box Mover </title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../custom.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+     <div id="moveColorBox" class="moveBox" onclick="changePosition();" style="margin: 20px;"></div>
+<div id="demo"></div>
+
+
+     <script>
+         function changePosition()
+         {
+             var findMargin = document.getElementById("moveColorBox").style.margin;
+             document.getElementById("demo").innerHTML = findMargin;
+             console.log(findMargin);
+         }
+     </script>
+</body>
+</html>
