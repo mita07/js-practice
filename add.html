@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> Add </title>
+    <title> Fill up input field and show result </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
 
     <script>
 
@@ -10,25 +12,28 @@
             var N1 = document.getElementById("name1").value;
             var N2 = document.getElementById("name2").value;
             //var N3 = parseInt(N1) + parseInt(N2);
-            var N3 = N1 + N2 ;
+            var N3 = N1+ " " + N2 ;
 
             document.getElementById("result").innerHTML = N3;
             document.getElementById("result").style.display='block';
-            document.getElementById("result").style.border='5px solid red';
-            document.getElementById("result").style.color='red';
+            document.getElementById("result").style.border='1px solid #9E9E9E';
+            document.getElementById("result").style.color='#4a4949';
+            document.getElementById("result").style.padding='10px';
+            document.getElementById("result").style.marginTop='50px';
         }
 
     </script>
-
 </head>
+
 <body>
+<div style="text-align: center;padding-top: 8%;" class="col-md-4 col-md-offset-4">
+    <h3>Personal Info</h3><br>
+    <input class="form-control" id="name1" type="text" placeholder="First Name" required="required"><br>
+    <input class="form-control" id="name2" type="text" placeholder="Last Name" required="required"><br>
+    <input class="btn btn-primary" id="getValue" type="button" value="Show Result" onclick="showName()">
 
-<input id="name1" type="text" placeholder="Enter Name1"/><br><br>
-<input id="name2" type="text" placeholder="Enter Name2"/><br><br>
-<input id="getValue" type="button" value="Get Name" onclick="showName()"/>
-
-<div style="display: none;" id="result"></div>
-
+    <div style="display: none;" id="result"></div>
+</div>
 
 </body>
 </html>
