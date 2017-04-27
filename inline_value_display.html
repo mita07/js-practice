@@ -2,14 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>News Editor Form onkeyup</title>
+    <title>Type and show output</title>
     <link href="custom.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
 </head>
-<body>
+<body style="background-color: rgba(3, 169, 244, 0.17);">
+<div class="col-md-4 col-md-offset-4" style="padding-top: 15%;">
+    <h4 style="text-align: center;">Type Something</h4><br>
+    <input class="form-control" type="text" name="myname" id="myname"
+           onkeyup="document.getElementById('viewResult2').innerHTML = this.value"
+           style="border: 1px solid rgba(63, 117, 181, 0.51);box-shadow: 2px 2px 3px rgb(157, 185, 217);">
+</div>
 
-<input type="text" name="myname" id="myname" onkeyup="document.getElementById('viewResult2').innerHTML = this.value">
 
-<div>
+<div class="col-md-4 col-md-offset-4" style="padding-top: 2%;padding-left:2%;">
     <span id="viewResult2"></span>
 </div>
 </body>
